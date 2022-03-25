@@ -28,6 +28,11 @@ public class RoadApiController {
         return roadService.findById(id);
     }
 
+    @PostMapping("/road/post")
+    public Long save(@RequestBody RoadSaveRequestDto requestDto) {
+        return roadService.save(requestDto);
+    }
+
     @PutMapping("/road/post/{id}")
     public Long update(@PathVariable Long id, @RequestBody RoadUpdateRequestDto requestDto) {
         return roadService.update(id, requestDto);

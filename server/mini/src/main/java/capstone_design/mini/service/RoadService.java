@@ -30,11 +30,12 @@ public class RoadService {
         road.update(requestDto.getRoad_name(), requestDto.getRoad_desc(),
                 requestDto.getDistance(), requestDto.getTime(),
                 requestDto.getStart_name(), requestDto.getStart_road_addr(),
-                requestDto.getStart_lot_addr(), requestDto.getEnd_name(),
+                requestDto.getStart_lot_addr(), requestDto.getStart_lat(),
+                requestDto.getStart_lng(), requestDto.getEnd_name(),
                 requestDto.getEnd_road_addr(), requestDto.getEnd_lot_addr(),
+                requestDto.getEnd_lat(), requestDto.getEnd_lng(),
                 requestDto.getRoad_path(), requestDto.getAgency_tel(),
                 requestDto.getAgency_name(), requestDto.getBase_date(),
-                requestDto.getX(), requestDto.getY(),
                 requestDto.getProvider_code(), requestDto.getProvider_name());
         return id;
     }

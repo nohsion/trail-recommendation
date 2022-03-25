@@ -50,15 +50,17 @@ public class RoadApiControllerTest {
         String start_name = "보라매공원";
         String start_road_addr = "1231";
         String start_lot_addr = "asdfas";
+        double start_lat = 37.12132;
+        double start_lng = 124.112345;
         String end_name = "아주대학교";
         String end_road_addr = "1231";
         String end_lot_addr = "adsf";
+        double end_lat = 37.22132;
+        double end_lng = 124.182345;
         String road_path = "보공->광교역->아주대";
         String agency_tel = "031-155-4444";
         String agency_name = "아주대 산업전기";
         String base_date = "2019-04-11";
-        String x = "12";
-        String y = "safsdafs";
         String provider_code = "1231213";
         String provider_name = "아주대학교입니다";
         RoadSaveRequestDto requestDto = RoadSaveRequestDto.builder()
@@ -69,15 +71,17 @@ public class RoadApiControllerTest {
                 .start_name(start_name)
                 .start_road_addr(start_road_addr)
                 .start_lot_addr(start_lot_addr)
+                .start_lat(start_lat)
+                .start_lng(start_lng)
                 .end_name(end_name)
                 .end_road_addr(end_road_addr)
                 .end_lot_addr(end_lot_addr)
+                .end_lat(end_lat)
+                .end_lng(end_lng)
                 .road_path(road_path)
                 .agency_tel(agency_tel)
                 .agency_name(agency_name)
                 .base_date(base_date)
-                .x(x)
-                .y(y)
                 .provider_code(provider_code)
                 .provider_name(provider_name)
                 .build();
@@ -103,9 +107,13 @@ public class RoadApiControllerTest {
         String start_name = "보라매공원";
         String start_road_addr = "1231";
         String start_lot_addr = "asdfas";
+        double start_lat = 37.12132;
+        double start_lng = 124.112345;
         String end_name = "아주대학교";
         String end_road_addr = "1231";
         String end_lot_addr = "adsf";
+        double end_lat = 37.22132;
+        double end_lng = 124.182345;
         String road_path = "보공->광교역->아주대";
         String agency_tel = "031-155-4444";
         String agency_name = "아주대 산업전기";
@@ -123,15 +131,17 @@ public class RoadApiControllerTest {
                 .start_name(start_name)
                 .start_road_addr(start_road_addr)
                 .start_lot_addr(start_lot_addr)
+                .start_lat(start_lat)
+                .start_lng(start_lng)
                 .end_name(end_name)
                 .end_road_addr(end_road_addr)
                 .end_lot_addr(end_lot_addr)
+                .end_lat(end_lat)
+                .end_lng(end_lng)
                 .road_path(road_path)
                 .agency_tel(agency_tel)
                 .agency_name(agency_name)
                 .base_date(base_date)
-                .x(x)
-                .y(y)
                 .provider_code(provider_code)
                 .provider_name(provider_name)
                 .build());
@@ -141,20 +151,24 @@ public class RoadApiControllerTest {
         RoadUpdateRequestDto requestDto = RoadUpdateRequestDto.builder()
                 .road_name(expectedRoadName)
                 .road_desc("수정수정수정")
-                .distance(1)
+                .distance(1.3)
                 .time("수정수정수정")
                 .start_name("수정수정수정")
                 .start_road_addr("수정수정수정")
                 .start_lot_addr("수정수정수정")
-                .end_name("수정수정수정")
-                .end_road_addr("수정수정수정")
-                .end_lot_addr("수정수정수정")
-                .road_path("수정수정수정")
-                .agency_tel("수정수정수정")
-                .agency_name("수정수정수정")
-                .base_date("수정수정수정")
-                .provider_code("수정수정수정")
-                .provider_name("수정수정수정")
+                .start_lat(start_lat)
+                .start_lng(start_lng)
+                .end_name(end_name)
+                .end_road_addr(end_road_addr)
+                .end_lot_addr(end_lot_addr)
+                .end_lat(end_lat)
+                .end_lng(end_lng)
+                .road_path(road_path)
+                .agency_tel(agency_tel)
+                .agency_name(agency_name)
+                .base_date(base_date)
+                .provider_code(provider_code)
+                .provider_name(provider_name)
                 .build();
 
         String url = "http://localhost:" + port + "/road/post/" + updatedId;
