@@ -29,3 +29,6 @@ INTO TABLE capstone_design.road
 FIELDS TERMINATED BY "|"
 LINES TERMINATED BY "\n"
 IGNORE 1 ROWS;
+--     (@var1, @var2, @var3, @var4, @var5, @var6, @var7, @var8, @var9, @var10, @var11, @var12, @var13, @var14, @var15, @var16, @var17, @var18, @var19, @var20, @var21)
+--     SET id = @var1, road_name = @var2, road_desc = @var3, distance = @var4, time = @var5, start_name = @var6, start_road_addr = @var7, start_lot_addr = @var8, start_point = POINT(@var9, @var10),
+--     end_name = @var11,  end_road_addr = @var12, end_lot_addr = @var13, end_point = POINT(@var14, @var15), road_path = @var16, agency_tel = @var17, agency_name = @var18, base_date = @var19, provider_code = @var20, provider_name = @var21;

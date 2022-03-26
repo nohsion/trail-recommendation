@@ -2,11 +2,11 @@ package capstone_design.mini.service;
 
 import capstone_design.mini.domain.Road;
 import capstone_design.mini.domain.RoadRepository;
+import capstone_design.mini.dto.RoadNearInterface;
 import capstone_design.mini.dto.RoadResponseDto;
 import capstone_design.mini.dto.RoadSaveRequestDto;
 import capstone_design.mini.dto.RoadUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -46,8 +46,13 @@ public class RoadService {
         return new RoadResponseDto(entity);
     }
 
-
     public List<Road> getRoads() {
         return roadRepository.findAll();
+    }
+
+    // TODO: 반경 10km 산책로 찾기
+    public List<RoadNearInterface> getNearRoads(double lat, double lng) {
+        List<RoadNearInterface> nearRoads = roadRepository.findNearRoads(lat, lng);
+        return nearRoads;
     }
 }
