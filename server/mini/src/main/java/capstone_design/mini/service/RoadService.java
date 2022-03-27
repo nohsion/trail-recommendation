@@ -50,9 +50,8 @@ public class RoadService {
         return roadRepository.findAll();
     }
 
-    // TODO: 반경 10km 산책로 찾기
+    // TODO: 반경 5km 산책로 찾기
     public List<RoadNearInterface> getNearRoads(double lat, double lng) {
-        List<RoadNearInterface> nearRoads = roadRepository.findNearRoads(lat, lng);
-        return nearRoads;
+        return roadRepository.findNearRoads(lat, lng);
     }
 }

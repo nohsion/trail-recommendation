@@ -39,10 +39,9 @@ public class RoadApiController {
         return roadService.update(id, requestDto);
     }
 
-    // TODO: 안드로이드에서 현위치(lat,lng) 받아서 반경 2km에 존재하는 DB 찾아서 보내주기
+    // TODO: 안드로이드에서 현위치(lat,lng) 받아서 반경 5km에 존재하는 DB 찾아서 보내주기
     @GetMapping("/road/nearRoads")
     public List<RoadNearInterface> getNearRoads(@RequestParam double lat, @RequestParam double lng) {
-        List<RoadNearInterface> nearRoads = roadService.getNearRoads(lat, lng);
-        return nearRoads;
+        return roadService.getNearRoads(lat, lng);
     }
 }
