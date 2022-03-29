@@ -9,7 +9,7 @@ import capstone_design.mini.service.RoadService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
@@ -44,4 +44,5 @@ public class RoadApiController {
     public List<RoadNearInterface> getNearRoads(@RequestParam double lat, @RequestParam double lng) {
         return roadService.getNearRoads(lat, lng);
     }
+
 }

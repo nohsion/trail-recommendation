@@ -18,4 +18,5 @@ public interface RoadRepository extends JpaRepository<Road, Long> {
             "ORDER BY d\n" +
             "LIMIT 0 , 10;", nativeQuery = true)
     List<RoadNearInterface> findNearRoads(@Param("lat") double lat, @Param("lng") double lng);
+
 }

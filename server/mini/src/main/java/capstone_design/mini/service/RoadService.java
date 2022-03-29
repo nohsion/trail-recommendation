@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -50,8 +51,9 @@ public class RoadService {
         return roadRepository.findAll();
     }
 
-    // TODO: 반경 5km 산책로 찾기
+    // 특정 위치 기준 5km 이내 데이터 찾기
     public List<RoadNearInterface> getNearRoads(double lat, double lng) {
         return roadRepository.findNearRoads(lat, lng);
     }
+
 }
