@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# AWS 관련 profile properties 파일
+**/application-aws.properties
